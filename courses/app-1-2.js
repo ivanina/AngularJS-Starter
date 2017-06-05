@@ -17,6 +17,13 @@
         };
     });
 
+    app.controller('GalleryController', function(){
+        this.current = 0;
+        this.setCurrent = function(value){
+            this.current = value ? value : 0;
+        };
+    });
+
     var imageRootPath = 'http://dhg7upb7j7jqa.cloudfront.net/shaping_up_with_angularjs/assets/demo/';
     var gems = [
         {
