@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="./app-3.css"/>
+    <link rel="stylesheet" type="text/css" href="app-3-4.css"/>
     <script src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
-    <script type="text/javascript" src="app-3.js"></script>
+    <script type="text/javascript" src="app-3-4.4.js"></script>
 </head>
 <body ng-controller="StoreController as store">
 <header>
@@ -36,14 +36,30 @@
                     <a href="" ng-click="tab.setTab(3)">Reviews</a>
                 </li>
             </ul>
-            <div ng-show="tab.isSet(1)">
+
+
+
+            <!--  Description Tab's Content  -->
+            <!--1-->
+            <!--<div ng-show="tab.isSet(1)">
                 <h4>Description</h4>
                 <blockquote>{{product.description}}</blockquote>
-            </div>
-            <div ng-show="tab.isSet(2)">
+            </div>-->
+            <!--2-->
+            <!-- <div ng-show="tab.isSet(1)" ng-include="product-description.html"></div> -->
+            <!--3-->
+            <product-description ng-show="tab.isSet(1)" ></product-description>
+
+
+            <!--  Spec Tab's Content  -->
+            <!--1-->
+            <!--<div ng-show="tab.isSet(2)">
                 <h4>Specs</h4>
                 <blockquote>Shine: {{product.shine}}</blockquote>
-            </div>
+            </div>-->
+            <!--2-->
+            <div product-specs ng-show="tab.isSet(2)"></div>
+
             <div ng-show="tab.isSet(3)">
                 <!--  Product Reviews List -->
                 <ul>

@@ -34,6 +34,23 @@
             this.review = {};
         };
     });
+
+    app.directive('productDescription',function(){
+        return {
+            restrict:'E',
+            templateUrl:'product-description.html'
+        };
+    });
+
+    app.directive("productSpecs", function(){
+        return {
+            restrict:'A',
+            templateUrl:'product-specs.html'
+        };
+    });
+
+
+
     var imageRootPath = 'http://dhg7upb7j7jqa.cloudfront.net/shaping_up_with_angularjs/assets/demo/';
     var gems = [{
         name: 'Azurite',
