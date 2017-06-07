@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html  ng-app="time">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="directive.current-time.js"></script>
+</head>
+<body>
+<div ng-controller="Ctrl2">
+    Date format: <input ng-model="format"> <hr/>
+    Current time is: <span current-time="format"></span>
+</div>
+</body>
+</html>
